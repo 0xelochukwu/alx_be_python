@@ -1,13 +1,13 @@
 #Principal
-P = 1000
+principal = 1000
 
 #Rate
-R = 0.05
+rate = 0.05
 
 #Time
-T = 3
+time = 3
 
 #Calculating the Interest
-#I = P * R * T
-I = P * R * T
+#interest = principal * rate * time
+interest = principal * rate * time
 print("The simple interest is: " + str(I))
