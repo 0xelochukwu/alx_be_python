@@ -12,18 +12,18 @@ type_of_operation = input("Choose the operation (+, -, *, /): ")
 match type_of_operation:
     case "+" :
         result = first_number + second_number
-        print("The result is " + str(result)+ ".")
+        print(f"The result is {result}.")
     case "-":
         result = first_number - second_number
-        print("The result is " + str(result)+ ".")
+        print(f"The result is {result}.")
     case "*":
         result = first_number * second_number
-        print("The result is " + str(result)+ ".")
+        print(f"The result is {result}.")
     case "/":
         if second_number == 0:
             print("Error: Cannot divide by zero")
         else:
             result = first_number / second_number
-            print("The result is " + str(result)+ ".")
+            print(f"The result is {result}.")
     case _:
         print("Invalid Operation")
