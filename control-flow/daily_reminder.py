@@ -1,40 +1,33 @@
 # daily_reminder.py
 
-# single task
+# Prompt for a single task
 task = input("Enter your task: ")
 
-# task's priority
+# Prompt for the task's priority
 priority = input("Priority (high/medium/low): ").lower()
 
-# checking if the task is time-bound
+# Prompt if the task is time-bound
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 # Match case statement based on priority
 match priority:
     case "high":
-        reminder = f"Reminder: '{task}' is a high priority task"
+        if time_bound == "yes":
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
+        else:
+            print(f"Reminder: '{task}' is a high priority task. You can plan it according to your schedule.")
     case "medium":
-        reminder = f"Reminder: '{task}' is a medium priority task"
+        if time_bound == "yes":
+            print(f"Reminder: '{task}' is a medium priority task that requires immediate attention today!")
+        else:
+            print(f"Reminder: '{task}' is a medium priority task. You can plan it according to your schedule.")
     case "low":
-        reminder = f"Note: '{task}' is a low priority task"
+        if time_bound == "yes":
+            print(f"Note: '{task}' is a low priority task. Consider completing it soon.")
+        else:
+            print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
     case _:
-        reminder = f"Reminder: '{task}' has an unknown priority"
-
-# Modify the reminder based on time sensitivity
-if time_bound == "yes":
-    if priority in ["high", "medium"]:
-        reminder += " that requires immediate attention today!"
-    elif priority == "low":
-        reminder += ". Consider completing it soon."
-else:
-    if priority == "low":
-        reminder += ". Consider completing it when you have free time."
-    else:
-        reminder += ". You can plan it according to your schedule."
-
-
-print()
-print(reminder)
+        print(f"Reminder: '{task}' has an unknown priority. Please check the input.")
 
 
 while True:
