@@ -6,10 +6,10 @@ second_number = int(input("Enter the second number: "))
 
 
 #asking for the type of operation
-type_of_operation = input("Choose the operation (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
 
 #matching them
-match type_of_operation:
+match operation:
     case "+" :
         result = first_number + second_number
         print(f"The result is {result}.")
