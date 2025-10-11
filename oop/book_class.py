@@ -12,3 +12,7 @@ class Book:
 
     def __del__(self):
         print("Deleting (title of the book)")
+
+my_book = Book('1984', 'Emeka', 1990)
+print(my_book)
+print(repr(my_book))
