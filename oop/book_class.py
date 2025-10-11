@@ -11,8 +11,8 @@ class Book:
         return f"Book('{self.title}', '{self.author}', {self.year})"
 
     def __del__(self):
-        print("Deleting (title of the book)")
+        print(f"Deleting {self.title}")
 
-my_book = Book('1984', 'Emeka', 1990)
+my_book = Book('1984', 'George Orwell', 1949)
 print(my_book)
 print(repr(my_book))
